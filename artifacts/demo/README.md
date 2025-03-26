@@ -16,3 +16,5 @@ This demo simulates an end-to-end data profiling pipeline that:
 ✅ Generates remediation reports with suggested corrective actions
 
 ✅ Generates compliance reports for auditors and regulators
+
+## This repository constains the both output files shown in the demo video.
