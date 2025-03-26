@@ -6,7 +6,7 @@ from main import run_pipeline
 from remediation_pipeline import apply_remediation
 
 # Configure API Key (Consider storing securely)
-genai.configure(api_key="AIzaSyD7AQXTeguhSaw0ZJpbko8JX4JfI5JVY3o")
+genai.configure(api_key=[Your API KEY]")
 
 # Read Regulatory Rules File
 with open(r"D:\DataProfiling_TechnologyHackathon\data_profiling-main\data_profiling-main\data\fed_regulations.txt", 'r') as file:
