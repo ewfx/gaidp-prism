@@ -18,7 +18,7 @@
 We have developed an **intelligent Data Profiling Agent** that automates **data validation** in the banking sector, ensuring compliance with regulatory standards set by organizations like the **Federal Reserve**. Our solution efficiently processes large datasets, identifying regulatory violations, assessing **risk scores**, detecting **anomalies**, and providing **record-specific remediation actions**. This streamlines compliance, enhances data integrity, and mitigates financial risks for banks.
 
 ## 🎥 Demo 
-📹 **[Video Demo (https://github.com/user-attachments/assets/07357c0c-c5a2-4a12-9822-f81ae25a6f31)](https://youtu.be/rr4ewcUh3Qs)**  
+📹 **[Video Demo](https://youtu.be/rr4ewcUh3Qs)**  
 🖼️ **Screenshots:**  
 ## Landing Page ![image](https://github.com/user-attachments/assets/07357c0c-c5a2-4a12-9822-f81ae25a6f31)
 ## Custome rule generation ![image](https://github.com/user-attachments/assets/e725a183-a2dc-4ef5-9457-6ddf5186b4bb)
