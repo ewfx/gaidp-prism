@@ -8,7 +8,7 @@ import ast
 
 
 # Configure Gemini API (replace with your actual Gemini API key)
-genai.configure(api_key="AIzaSyD7AQXTeguhSaw0ZJpbko8JX4JfI5JVY3o")
+genai.configure(api_key=[Your API KEY])
 
 def suggest_remediation_gemini(flags, max_retries=3, delay=1.5):
 
