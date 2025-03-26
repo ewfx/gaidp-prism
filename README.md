@@ -85,6 +85,8 @@ Navigate to the `src` folder and run:
 - 🤖 **LLM**: `Google Gemini 1.5 Pro`
 
 ## 👥 Team
+- **Madhura Oak**
+- **Keval Sadharakia**
 - **Dishita Mohan** - [GitHub](https://github.com/dishitamohan) | [LinkedIn](https://www.linkedin.com/in/dishitamohan)
 - **Krithika Ramachandran** - [GitHub](https://github.com/kritatgit) | [LinkedIn](https://www.linkedin.com/in/krithika-ramachandran-42a1471b1)
 - **Ronan Lobo**
