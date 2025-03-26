@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyD7AQXTeguhSaw0ZJpbko8JX4JfI5JVY3o")
+genai.configure(api_key=[Your API KEY])
 
 def extract_rules_gemini(instruction_text):
     model = genai.GenerativeModel('models/gemini-1.5-pro-002')
