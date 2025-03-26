@@ -66,7 +66,7 @@ Our application integrates the following technologies:
 ## 🏃 How to Run
 1️⃣ **Clone the repository**  
 ```sh
-   git clone https://github.com/your-repo.git
+   git clone [https://github.com/your-repo.git](https://github.com/ewfx/gaidp-prism.git)
 ```
 2️⃣ **Install dependencies**  
 ```sh
