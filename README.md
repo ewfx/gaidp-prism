@@ -22,6 +22,7 @@ We have developed an **intelligent Data Profiling Agent** that automates **data 
 🖼️ **Screenshots:**  
 ## Landing Page ![image](https://github.com/user-attachments/assets/07357c0c-c5a2-4a12-9822-f81ae25a6f31)
 ## Custome rule generation ![image](https://github.com/user-attachments/assets/e725a183-a2dc-4ef5-9457-6ddf5186b4bb)
+## Results Page ![image](https://github.com/user-attachments/assets/6ebbe421-8cf6-469e-98d4-c2f53ee31503)
 
 
 
