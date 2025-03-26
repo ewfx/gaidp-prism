@@ -27,7 +27,7 @@ We have developed an **intelligent Data Profiling Agent** that automates **data 
 Traditional data validation is a manual, time-consuming process requiring expert knowledge. Investigating validation failures is equally challenging. Given **Generative AI’s** capabilities in handling complex tasks, we leveraged **GenAI** to automate and streamline the validation process, significantly reducing effort and enhancing accuracy.
 
 ## 📊 Architecture Diagram
-*(Add your architecture diagram here)*
+![Alttext](https://github.com/ewfx/gaidp-prism/blob/bff5485db47e924069edad82116825feed1d2ffb/architecturediagram.png)
 
 ## ⚙️ What It Does
 Our application offers the following functionalities:
