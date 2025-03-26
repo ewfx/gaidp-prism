@@ -1,0 +1,238 @@
+CustomerID,InternalObligorID,OriginalInternalObligorID,ObligorName,City,Country,ZipCodeForeignMailingCode,IndustryCode,IndustryCodeType,InternalRating,TIN,StockExchange,TKR,CUSIP,InternalCreditFacilityID,OriginalInternalCreditFacilityID,OriginationDate,MaturityDate,FacilityType,OtherFacilityType,CreditFacilityPurpose,OtherFacilityPurpose,CommittedExposure,UtilizedExposure,LineReportedOnFRY9C,LineOfBusiness,CumulativeChargeoffs,ASC310-10,Validation Results,Computed_Risk_Score,Anomaly_Score,Is_Anomaly,Remediation_Advice
+CUST001,OBL001,OBL001,"Herring, Ford and Montgomery",South Julietown,US,95004,722511,3,B-,593-53-7069,Unknown,Unknown,477411.5,FCL001,FCL001,07-07-2022,12-01-2035,14,,9,,7182625,2462233,4,Facilitate E-Business Relationships,302603,60520,"{'valid': False, 'flags': ['Invalid Characters in ObligorName', 'Invalid TIN', 'Invalid Ticker', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount', 'Filtered Customer ID'], 'risk_score': 61, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Review CustomerID. Only CUST003 is currently accepted.', 'Trigger enhanced compliance review and request additional documentation.']}",61,1,False,"Let's break down the remediation actions for each flagged issue:
+
+* **Invalid Characters in ObligorName:** Review the ObligorName field and remove any special characters (e.g., !@#$%^&*(), etc.) or formatting that isn't alphanumeric or standard punctuation. Ensure the name matches official records.  Compliance step: Refer to the institution's naming convention policy.
+
+* **Invalid TIN (Taxpayer Identification Number):** Verify the TIN against official sources (e.g., IRS database for US entities). If incorrect, obtain the correct TIN from the obligor. If the entity is foreign, ensure the appropriate foreign tax identifier is used. Compliance step: Document the TIN verification process.
+
+* **Invalid Ticker:** Confirm the ticker symbol with a reliable financial data source (e.g., Bloomberg, Reuters). If incorrect, research the correct ticker or determine if one exists.  If no valid ticker exists, this field should be left blank. Compliance step:  Refer to the institution's security master file policy.
+
+* **Invalid CUSIP:** Verify the CUSIP with a CUSIP service provider or a reliable financial data source.  Correct the CUSIP if incorrect. If the security doesn't have a CUSIP, explore alternative identifiers (e.g., ISIN).  Compliance step: Document the CUSIP verification process.
+
+* **Invalid Origination Date Format:** Correct the date format to comply with the system's required format (e.g., YYYY-MM-DD). Ensure the date is accurate.  Compliance step:  Reference the system's date formatting guidelines.
+
+* **Invalid Maturity Date Format:**  Correct the date format to comply with the system's required format (e.g., YYYY-MM-DD). Ensure the date is accurate and logically follows the origination date. Compliance step: Reference the system's date formatting guidelines.
+
+* **Unnecessary Facility Description:** If the facility description duplicates information already captured in other fields or is irrelevant to the transaction, remove it. Keep descriptions concise and relevant. Compliance step: Refer to the institution's data entry standards for loan facilities.
+
+* **Unnecessary Purpose Description:** Similar to the facility description, if the purpose duplicates information or is irrelevant, remove it. Maintain clear and concise purpose descriptions. Compliance step: Refer to the institution's data entry standards for loan purposes.
+
+* **Unapproved Line of Business:** This indicates the transaction falls outside the institution's authorized activities.  This requires escalation to a senior manager or compliance officer for review and approval. The transaction may need to be rejected if it cannot be justified. Compliance step: Refer to the institution's approved lines of business policy.
+
+* **Invalid Reserve Amount:**  Review the calculation of the reserve amount. Ensure it aligns with the institution's reserve policy and regulatory requirements. Correct any calculation errors. Compliance step: Document the reserve calculation methodology and rationale.
+
+* **Filtered Customer ID:** This suggests the customer may be on a watchlist or subject to restrictions. Immediately halt the transaction and escalate to the compliance department for investigation.  Compliance step:  Refer to the institution's KYC/AML and sanctions policies and procedures.
+
+
+By addressing each flag systematically and following the outlined compliance steps, you can ensure the transaction complies with regulations and internal policies.  Thorough documentation of each remediation step is crucial for audit trails and demonstrating compliance efforts.
+"
+CUST002,OBL002,OBL002,Lewis and Sons,Rachelmouth,US,27002,325411,3,BBB-,874-28-1764,LSE,eFs,362934.0,FCL002,FCL002,14-10-2021,16-03-2030,14,,25,,6549428,3874696,3,Implement Magnetic Partnerships,203179,40635,"{'valid': False, 'flags': ['Invalid TIN', 'Invalid Ticker', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount', 'Filtered Customer ID'], 'risk_score': 61, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Review CustomerID. Only CUST003 is currently accepted.', 'Trigger enhanced compliance review and request additional documentation.']}",61,1,False,"Here's a breakdown of remediation actions for each flagged issue:
+
+* **Invalid TIN (Taxpayer Identification Number):**  Obtain the correct TIN from the customer. Verify the TIN against IRS records (for US transactions) or the relevant tax authority database for the jurisdiction.  Document the verification steps.  Adjust the transaction record with the correct TIN.
+
+* **Invalid Ticker:**  Identify the correct ticker symbol. Verify the ticker symbol against a reliable financial data source (e.g., Bloomberg, Refinitiv). Correct the ticker in the transaction record. If no valid ticker exists (e.g., for private placements), use the appropriate placeholder or code as per internal procedures.
+
+* **Invalid CUSIP (Committee on Uniform Securities Identification Procedures):**  Research the correct CUSIP for the security.  Financial databases or the issuer can provide this information. Update the transaction record with the valid CUSIP. If no CUSIP exists (e.g., for foreign securities), document the reason and use any alternative identifiers required internally.
+
+* **Invalid Origination Date Format:** Correct the date format to comply with the system's required format (e.g., YYYY-MM-DD). Ensure the date itself is accurate.
+
+* **Invalid Maturity Date Format:**  Similar to the origination date, correct the format and verify the accuracy of the maturity date.
+
+* **Unnecessary Facility Description:** If the facility description duplicates information already captured elsewhere or is irrelevant to the transaction, remove it.  Maintain data minimization principles.
+
+* **Unnecessary Purpose Description:** If the purpose description is redundant or unnecessary, remove it.  Ensure sufficient information is retained to understand the transaction's nature for compliance purposes.
+
+* **Unapproved Line of Business:** Determine if the transaction is permissible. If so, the line of business classification needs correction.  If the transaction falls outside approved business activities, it should be escalated to management for review and potential cancellation.  Consult the relevant policy documentation.
+
+* **Invalid Reserve Amount:** Review the calculation methodology for the reserve amount. Recalculate based on the correct method and update the transaction record.  Document the reason for the initial error and the correction made.
+
+* **Filtered Customer ID:**  Investigate why the customer ID was filtered. Common reasons include sanctions screening matches, negative news alerts, or internal watchlists.  This requires enhanced due diligence (EDD). Depending on the nature of the filter hit, the transaction may need to be escalated for further review, blocked, or even reported to the appropriate authorities.  Document all investigation and decision-making steps.
+
+
+**General Compliance Steps:**
+
+* **Documentation:**  Thoroughly document all remediation steps, including the nature of the error, the correction made, the data sources used for verification, and the individuals involved.
+* **Audit Trail:** Ensure a clear audit trail exists for all changes made to the transaction record.
+* **Training:** If errors appear systemic (e.g., repeated date format issues), consider refresher training for staff.
+* **Root Cause Analysis:** For recurring issues, perform a root cause analysis to identify underlying process or system deficiencies and implement corrective actions.
+* **Policy Review:** Regularly review and update policies and procedures related to data quality and compliance to prevent future errors.
+
+
+By addressing each flagged issue systematically and following compliance best practices, you can mitigate risks and ensure the integrity of your transactions.
+"
+CUST003,OBL003,OBL003,"Jimenez, Martinez and Bonilla",Lake Evelynland,US,32671,518210,2,BBB-,625-39-4504,NYSE,VVC,214041.0,FCL003,FCL003,30-09-2016,28-06-2030,99,,14,,48195303,32219538,3,Aggregate Leading-Edge Partnerships,387328,77465,"{'valid': False, 'flags': ['Invalid Characters in ObligorName', 'Invalid TIN', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Invalid Facility Type', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount'], 'risk_score': 59, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Trigger enhanced compliance review and request additional documentation.']}",59,-1,True,"Here's a breakdown of remediation actions for each flagged issue:
+
+* **Invalid Characters in ObligorName:**  Review the ObligorName field and remove any special characters (e.g., !@#$%^&*(), etc.) or formatting that isn't alphanumeric and standard punctuation (periods, commas, hyphens). Ensure the name matches official records.  Compliance: Refer to internal naming conventions and data quality guidelines.
+
+* **Invalid TIN (Taxpayer Identification Number):** Verify the TIN against official IRS records (for US entities) or the relevant tax authority for other jurisdictions. Correct any typographical errors. If the entity is new, ensure they have obtained a valid TIN. Compliance:  Maintain records of TIN validation.
+
+* **Invalid CUSIP (Committee on Uniform Securities Identification Procedures):** Verify the CUSIP against a reliable CUSIP database or service.  If incorrect, identify the correct CUSIP for the security.  If the security is newly issued and doesn't have a CUSIP, follow the appropriate procedures for obtaining one. Compliance: Ensure use of a reputable CUSIP data source.
+
+* **Invalid Origination Date Format:**  Correct the date format to the required standard (e.g., YYYY-MM-DD).  Ensure the date is a valid calendar date. Compliance: Document the accepted date format.
+
+* **Invalid Maturity Date Format:** Same as Origination Date – correct the format and ensure a valid date.  If the maturity date is open-ended, use the appropriate designation according to your system's requirements. Compliance: Document the accepted date format, including handling of open-ended maturities.
+
+* **Invalid Facility Type:** Review the list of approved facility types. Select the correct facility type from the approved list that accurately reflects the nature of the credit facility. Compliance: Maintain and regularly review the approved facility type list.
+
+* **Unnecessary Facility Description:** If the facility type adequately describes the facility, remove the redundant facility description. If additional information is essential, ensure it's concise and relevant. Compliance: Establish clear guidelines on when facility descriptions are necessary.
+
+* **Unnecessary Purpose Description:** If the facility's purpose is evident from other information (e.g., facility type, line of business), remove the redundant purpose description.  If necessary, keep the description concise and focused on the core purpose. Compliance:  Establish guidelines for purpose descriptions.
+
+* **Unapproved Line of Business:** Review the list of approved lines of business. If the current line of business is not approved, determine the appropriate approved line of business that aligns with the transaction. If the transaction falls outside approved lines of business, escalate to senior management for review and potential approval. Compliance: Maintain and regularly update the approved lines of business, along with escalation procedures.
+
+* **Invalid Reserve Amount:** Review the calculation methodology for the reserve amount. Ensure it adheres to internal policies and regulatory requirements. Correct any errors in the calculation or underlying data. Compliance: Document the reserve calculation methodology and ensure it is reviewed periodically.
+
+
+By addressing each of these flags systematically, you can bring the transaction into compliance and mitigate potential risks.  Thorough documentation of each step is crucial for audit trails and demonstrating compliance efforts.
+"
+CUST004,OBL004,OBL004,"Ramirez, Gonzales and Garza",New Caitlin,US,11731,325411,3,D,561-06-8766,LSE,PUR,749540.0,FCL004,FCL004,02-01-2023,17-07-2032,5,,11,,53577701,31118951,5,Architect Clicks-And-Mortar Vortals,455926,91185,"{'valid': False, 'flags': ['Invalid Characters in ObligorName', 'Invalid TIN', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount', 'Filtered Customer ID'], 'risk_score': 56, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Review CustomerID. Only CUST003 is currently accepted.', 'Trigger enhanced compliance review and request additional documentation.']}",56,1,False,"Let's break down the remediation actions for each flagged issue:
+
+* **Invalid Characters in ObligorName:** Review the ObligorName field and remove any special characters (e.g., !@#$%^&*(), etc.) or formatting that isn't alphanumeric and standard punctuation.  Ensure the name matches official documentation.  **Compliance:** Refer to internal naming conventions and data quality standards.
+
+* **Invalid TIN (Taxpayer Identification Number):** Verify the TIN provided against official records (e.g., IRS database).  If incorrect, obtain the correct TIN from the customer. If the TIN is foreign, ensure it adheres to the appropriate format.  **Compliance:**  Ensure adherence to KYC/AML regulations.
+
+* **Invalid CUSIP (Committee on Uniform Securities Identification Procedures):** Confirm the CUSIP with a reliable source like a financial data provider (e.g., Bloomberg, S&P). If incorrect, research the correct CUSIP for the security. If the security is not publicly traded or doesn't have a CUSIP, document the reason.  **Compliance:** Ensure accurate security identification for regulatory reporting.
+
+* **Invalid Origination Date Format:** Correct the date format to the system's required standard (e.g., YYYY-MM-DD). Ensure the date itself is logically valid (not in the future, not prior to business inception, etc.).  **Compliance:**  Data integrity and consistency in reporting.
+
+* **Invalid Maturity Date Format:** Correct the date format similar to the Origination Date.  Ensure the Maturity Date is logically sound (after the Origination Date, within acceptable limits for the product type).  **Compliance:** Accurate representation of the financial instrument's lifespan.
+
+* **Unnecessary Facility Description:** Remove the unnecessary description.  If some descriptive information is essential, condense it to a concise and relevant summary.  **Compliance:**  Maintain data efficiency and avoid unnecessary complexity.
+
+* **Unnecessary Purpose Description:**  Remove the unnecessary description. If essential details are present, condense them to a concise summary focused on the transaction's legitimate business purpose.  **Compliance:**  Focus on relevant information for transaction monitoring and audit trails.
+
+* **Unapproved Line of Business:**  Determine why this transaction was coded to an unapproved Line of Business.  If an error, correct it to the appropriate approved Line of Business. If a new product or service, proper authorization must be obtained *before* processing the transaction.  **Compliance:**  Adhere to internal policies and procedures regarding permitted business activities.
+
+* **Invalid Reserve Amount:**  Review the calculation methodology for the reserve amount. Correct any calculation errors.  Ensure the reserve is appropriate for the risk profile of the transaction.  **Compliance:**  Adherence to regulatory capital adequacy requirements and internal risk management policies.
+
+* **Filtered Customer ID:**  Investigate why the customer ID is on a filtered list (e.g., sanctions list, negative news). This requires immediate attention and escalation to the appropriate compliance team.  The transaction should be halted pending the investigation's outcome.  **Compliance:**  KYC/AML and sanctions screening requirements.
+
+
+By addressing each of these flagged issues systematically, the transaction can be brought into compliance and processed or appropriately rejected based on the findings of the investigations.  Thorough documentation of all remediation steps is crucial for audit trails and demonstrating compliance efforts.
+"
+CUST005,OBL005,OBL005,Individual,East Taylorton,US,8657,111130,1,AA,Unknown,Unknown,Unknown,477411.5,FCL005,FCL005,12-08-2017,02-07-2027,1,,14,,30575247,19925353,3,Leverage Bricks-And-Clicks Deliverables,109420,21884,"{'valid': False, 'flags': ['Name-TIN Conflict', 'Invalid ZIP/Postal Code', 'Invalid TIN', 'Invalid Ticker', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount', 'Filtered Customer ID'], 'risk_score': 74, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Review CustomerID. Only CUST003 is currently accepted.', 'Trigger enhanced compliance review and request additional documentation.']}",74,1,False,"This transaction has multiple serious issues requiring immediate attention and likely rejection pending thorough review. Here's a breakdown of remediation actions:
+
+**1. Name-TIN Conflict:**
+* **Action:** Verify customer's name and Taxpayer Identification Number (TIN) against official documentation (e.g., Social Security card, IRS Form W-9 for US, equivalent for other jurisdictions).
+* **Explanation:**  A mismatch suggests potential identity theft, fraud, or clerical error.  
+* **Compliance:**  Follow KYC (Know Your Customer) procedures. Update records with correct information.  If discrepancies cannot be resolved, escalate to compliance officer and potentially file a Suspicious Activity Report (SAR).
+
+**2. Invalid ZIP/Postal Code:**
+* **Action:** Obtain the correct ZIP/Postal code from the customer. Verify against official postal service databases.
+* **Explanation:** Incorrect codes hinder accurate identification and communication.
+* **Compliance:** Ensure address verification procedures are being followed.
+
+**3. Invalid TIN:**
+* **Action:** Same as Name-TIN Conflict.  Validate the TIN independently.
+* **Explanation:** An invalid TIN indicates potential tax evasion, fraud, or error.
+* **Compliance:** Essential for accurate tax reporting and compliance with anti-money laundering (AML) regulations.
+
+**4. Invalid Ticker:**
+* **Action:** Verify the correct ticker symbol with a reliable financial data source.  If the instrument doesn't exist, investigate further.
+* **Explanation:**  Incorrect ticker symbols prevent accurate trade execution and portfolio tracking.
+* **Compliance:** Ensure accurate record-keeping for securities transactions.
+
+**5. Invalid CUSIP:**
+* **Action:** Similar to Invalid Ticker.  Validate the CUSIP (Committee on Uniform Securities Identification Procedures) number with a reliable source.
+* **Explanation:** An incorrect CUSIP can lead to failed settlements and incorrect reporting.
+* **Compliance:**  Critical for accurate identification of securities.
+
+**6. Invalid Origination Date Format & Invalid Maturity Date Format:**
+* **Action:** Correct the date format to the system's accepted standard (YYYY-MM-DD, MM/DD/YYYY, etc.).  Confirm date accuracy with the customer or relevant documentation.
+* **Explanation:** Consistent date formats are essential for data integrity and reporting.
+* **Compliance:** Required for accurate record-keeping.
+
+**7. Unnecessary Facility Description & Unnecessary Purpose Description:**
+* **Action:** Remove the unnecessary descriptions unless specifically required by internal procedures or regulations.  Maintain clear and concise transaction records.
+* **Explanation:**  Extraneous information can clutter systems and potentially obscure important details.
+* **Compliance:**  Follow data minimization principles.
+
+**8. Unapproved Line of Business:**
+* **Action:** Halt the transaction.  Determine if the transaction should be rejected or if an exception can be granted.  Consult with the relevant business unit and compliance officer.
+* **Explanation:**  Operating outside approved lines of business exposes the institution to undue risk.
+* **Compliance:**  Adherence to internal policies and risk appetite is crucial.
+
+**9. Invalid Reserve Amount:**
+* **Action:**  Review the calculation methodology for the reserve amount.  Correct the amount based on established procedures and regulatory requirements.
+* **Explanation:**  Incorrect reserve amounts can lead to inadequate loss coverage and misstated financials.
+* **Compliance:**  Essential for maintaining adequate financial reserves.
+
+**10. Filtered Customer ID:**
+* **Action:** Investigate why the customer ID is flagged. This often indicates the customer is on a watchlist, sanctions list, or has a negative internal risk rating.  Escalate to the compliance officer.
+* **Explanation:**  This flag signals heightened risk associated with the customer and requires enhanced due diligence.
+* **Compliance:**  Critical for AML and sanctions compliance.
+
+
+This transaction should not proceed until all issues are resolved and documented.  Depending on the severity and nature of the issues, further investigation and reporting to regulatory authorities may be necessary.
+"
+CUST006,OBL006,OBL006,Nguyen-Coleman,South Ronald,US,5670,331210,1,B-,083-40-7113,LSE,gPg,748629.0,FCL006,FCL006,13-09-2018,10-11-2033,5,,10,,54439968,24155429,4,Disintermediate Turn-Key Eyeballs,44095,8819,"{'valid': False, 'flags': ['Invalid ZIP/Postal Code', 'Invalid TIN', 'Invalid Ticker', 'Invalid CUSIP', 'Invalid Origination Date Format', 'Invalid Maturity Date Format', 'Unnecessary Facility Description', 'Unnecessary Purpose Description', 'Unapproved Line of Business', 'Invalid Reserve Amount', 'Filtered Customer ID'], 'risk_score': 66, 'remediation': ['Trigger enhanced compliance review and request additional documentation.', 'Review CustomerID. Only CUST003 is currently accepted.', 'Trigger enhanced compliance review and request additional documentation.']}",66,1,False,"Let's break down each flag and outline the remediation actions.
+
+**Invalid ZIP/Postal Code:**
+
+* **Action:** Correct the ZIP/Postal code based on the customer's provided address.  Use a validated address database to ensure accuracy.
+* **Explanation:** Inaccurate ZIP codes can hinder KYC/AML compliance and lead to failed transactions.
+* **Compliance:** Document the source of the corrected information and update customer records.
+
+**Invalid TIN (Taxpayer Identification Number):**
+
+* **Action:** Contact the customer to obtain the correct TIN. Verify the provided TIN against IRS records (for US-based TINs) or the relevant tax authority's database.
+* **Explanation:** An incorrect TIN can lead to tax reporting issues and potential penalties.
+* **Compliance:**  Document the communication with the customer and the verification process.
+
+**Invalid Ticker:**
+
+* **Action:** Verify the correct ticker symbol using a reliable financial data source like Bloomberg or Reuters.  If the instrument doesn't exist, investigate further.  It may be an OTC or private placement requiring different identification.
+* **Explanation:** An invalid ticker can lead to incorrect trade execution or valuation issues.
+* **Compliance:** Ensure all trading activity uses validated ticker symbols.
+
+**Invalid CUSIP:**
+
+* **Action:** Similar to the ticker, verify the CUSIP (Committee on Uniform Securities Identification Procedures) number with a reliable source like S&P Capital IQ or Bloomberg. Investigate missing or incorrect CUSIPs as they are crucial for securities identification.
+* **Explanation:** An incorrect CUSIP can cause settlement failures and reconciliation problems.
+* **Compliance:** Maintain a process for verifying CUSIPs before trade execution.
+
+**Invalid Origination Date Format:**
+
+* **Action:** Correct the date format to the system's accepted format (e.g., YYYY-MM-DD).  Refer to internal documentation for required format.
+* **Explanation:** Consistent date formats are essential for data integrity and reporting.
+* **Compliance:** Enforce strict adherence to the prescribed date format throughout the system.
+
+**Invalid Maturity Date Format:**
+
+* **Action:** Same as Origination Date, correct the format to comply with the system's requirements.
+* **Explanation:** Consistency prevents errors in calculating durations and other time-sensitive calculations.
+* **Compliance:** Enforce standardized date formats.
+
+**Unnecessary Facility Description:**
+
+* **Action:** Remove the unnecessary description.  Maintain concise and relevant information only.
+* **Explanation:** Excess information can clutter systems and make relevant data harder to find.
+* **Compliance:** Adhere to data minimization principles.
+
+**Unnecessary Purpose Description:**
+
+* **Action:** Remove the unnecessary description.  Keep only necessary information regarding the transaction's purpose.
+* **Explanation:**  Brevity and clarity are crucial for efficient record-keeping.
+* **Compliance:** Follow data minimization principles and established data governance policies.
+
+**Unapproved Line of Business:**
+
+* **Action:** Halt the transaction. Investigate why this unapproved line of business is being pursued.  Obtain necessary approvals from relevant authorities within the institution before proceeding, if permissible.
+* **Explanation:**  Operating outside approved lines of business can expose the institution to undue risk.
+* **Compliance:** Ensure all transactions align with the institution's risk appetite and regulatory requirements.
+
+**Invalid Reserve Amount:**
+
+* **Action:** Recalculate the reserve amount based on internal policies and regulatory requirements.  Consult with the appropriate department (e.g., Credit Risk) for guidance.
+* **Explanation:** Incorrect reserve amounts can misrepresent the institution's financial position.
+* **Compliance:** Implement robust reserve calculation procedures and regular audits.
+
+**Filtered Customer ID:**
+
+* **Action:** Investigate why the customer ID is on a filtered list (e.g., sanctions list, negative news, PEP list).  If the customer is legitimately flagged, further due diligence and possibly enhanced due diligence (EDD) are required. Depending on internal policies and the nature of the flag, the transaction might need to be blocked or reported to the relevant authorities.
+* **Explanation:** Filtered IDs represent potential compliance risks that require immediate attention.
+* **Compliance:**  Strictly adhere to KYC/AML and sanctions screening procedures.
+
+
+By addressing each of these flags systematically, you can ensure the transaction complies with relevant regulations and internal policies.  Thorough documentation of each step is crucial for audit trails and demonstrating a strong compliance posture.
+"
